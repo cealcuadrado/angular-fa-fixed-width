@@ -1,0 +1,55 @@
+
+<div class="row">
+  <div class="col-12 col-lg-3">
+    <div class="form-group">
+      <label>Size</label>
+      <select class="form-control" [(ngModel)]="currentIcon">
+        <option *ngFor="let icon of availableIcons" [value]="icon">
+          {{icon}}
+        </option>
+      </select>
+    </div>
+    <p>Icon: {{currentIcon}}</p>
+  </div>
+  <div class="col-12 col-lg-3">
+    <div class="form-group">
+      <label>Size</label>
+      <select class="form-control" [(ngModel)]="currentSize">
+        <option *ngFor="let size of sizeClasses" [value]="size">
+          {{size}}
+        </option>
+      </select>
+    </div>
+    <p>Size: {{currentSize}}</p>
+  </div>
+  <div class="col-12 col-lg-3">
+    <div class="form-group">
+      <label>Fixed Width</label>
+      <br>
+      <ui-switch [(ngModel)]="fixedWidth">
+      </ui-switch>
+    </div>
+    <p>Fixed Width: {{fixedWidth}}</p>
+  </div>
+  <div class="col-12 col-lg-3">
+    <div class="form-group">
+      <label>Show Background Color</label>
+      <br>
+      <ui-switch [(ngModel)]="showBackgroundColor">
+      </ui-switch>
+    </div>
+    <p>Show Background Color: {{showBackgroundColor}}</p>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-12">
+    <p><i class="fa {{getCurrentIcon()}} {{getCurrentSize()}} {{getFixedWidth()}} {{getShowBackgroundColor()}}"></i> User</p>
+    <p><i class="fa {{getCurrentIcon()}} {{getCurrentSize()}} {{getFixedWidth()}} {{getShowBackgroundColor()}}"></i>
+      User</p>
+    <p><i class="fa {{getCurrentIcon()}} {{getCurrentSize()}} {{getFixedWidth()}} {{getShowBackgroundColor()}}"></i>
+      User</p>
+  </div>
+</div>
+
+
